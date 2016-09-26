@@ -16,7 +16,7 @@
     "serve": "live-server ./ --open=dist --port=8000 --ignore=node_modules",
     "serve-ci:start": "forever start server-ci.js",
     "serve-ci:stop": "forever stopall",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
   "repository": {
     "type": "git",
