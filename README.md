@@ -4,6 +4,10 @@ Mmmmhmmm this is a tasty burger
 
 [![Mmmmhmmm this is a tasty burger](http://i.imgur.com/g6Oltok.gif)](https://www.youtube.com/watch?v=Mnb_3ibUp38&t=54 "Mmmmhmmm this is a tasty burger")
 
+## Demo
+
+<https://hinok.github.io/tasty-burger/>
+
 ## Usage
 
 ### Take meat
