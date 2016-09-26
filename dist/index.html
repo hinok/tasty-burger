@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tasty Burger</title>
+    <link rel="stylesheet" href="tasty-burger.css">
+    <style>
+      *, *:after, *:before {
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #f7f7f7;
+        font-family: sans-serif;
+      }
+
+      .icons {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+      }
+
+      .icons__item {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        height: 48px;
+      }
+
+      .icons__item:before {
+        display: block;
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+        content: '';
+      }
+
+      .icons__item:not(:last-child) {
+        margin-right: 60px;
+      }
+
+      .icons__label {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        -webkit-transform: translate(-50%, 30px);
+            -ms-transform: translate(-50%, 30px);
+                transform: translate(-50%, 30px);
+        display: block;
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 0.15em;
+        color: rgba(0, 0, 0, .24);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="icons">
+
+      <div class="icons__item">
+        <div class="tb tb--sm"><span></span></div>
+        <small class="icons__label">12px</small>
+      </div>
+
+      <div class="icons__item">
+        <div class="tb tb--md"><span></span></div>
+        <small class="icons__label">24px</small>
+      </div>
+
+      <div class="icons__item">
+        <div class="tb tb--lg"><span></span></div>
+        <small class="icons__label">48px</small>
+      </div>
+
+    </div>
+    <script>
+      var tbs = Array.prototype.slice.call(document.querySelectorAll('.tb'));
+
+      tbs.forEach(function(tb) {
+        tb.addEventListener('click', function() {
+          tb.classList.toggle('tb--x');
+        });
+      });
+    </script>
+  </body>
+</html>

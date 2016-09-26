@@ -1,0 +1,88 @@
+.tb {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+  cursor: pointer; }
+  .tb, .tb:after, .tb:before {
+    box-sizing: border-box; }
+  .tb span {
+    position: relative; }
+    .tb span, .tb span:before, .tb span:after {
+      display: block;
+      width: 100%;
+      background: #000;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden; }
+    .tb span:before, .tb span:after {
+      position: absolute;
+      content: ''; }
+  .tb:hover span:before {
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px); }
+  .tb:hover span:after {
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px); }
+  .tb--x span {
+    background: transparent; }
+
+.tb--sm {
+  width: 14.4px;
+  height: 12px; }
+  .tb--sm span {
+    margin: 5px 0 0; }
+    .tb--sm span, .tb--sm span:before, .tb--sm span:after {
+      height: 2px; }
+    .tb--sm span:before {
+      top: -5px; }
+    .tb--sm span:after {
+      top: 5px; }
+
+.tb--sm.tb--x span:before {
+  -webkit-transform: translate(0, 5px) rotate(-45deg);
+          transform: translate(0, 5px) rotate(-45deg); }
+
+.tb--sm.tb--x span:after {
+  -webkit-transform: translate(0, -5px) rotate(45deg);
+          transform: translate(0, -5px) rotate(45deg); }
+
+.tb--md {
+  width: 28.8px;
+  height: 24px; }
+  .tb--md span {
+    margin: 11px 0 0; }
+    .tb--md span, .tb--md span:before, .tb--md span:after {
+      height: 2px; }
+    .tb--md span:before {
+      top: -11px; }
+    .tb--md span:after {
+      top: 11px; }
+
+.tb--md.tb--x span:before {
+  -webkit-transform: translate(0, 11px) rotate(-45deg);
+          transform: translate(0, 11px) rotate(-45deg); }
+
+.tb--md.tb--x span:after {
+  -webkit-transform: translate(0, -11px) rotate(45deg);
+          transform: translate(0, -11px) rotate(45deg); }
+
+.tb--lg {
+  width: 52.8px;
+  height: 44px; }
+  .tb--lg span {
+    margin: 21px 0 0; }
+    .tb--lg span, .tb--lg span:before, .tb--lg span:after {
+      height: 2px; }
+    .tb--lg span:before {
+      top: -21px; }
+    .tb--lg span:after {
+      top: 21px; }
+
+.tb--lg.tb--x span:before {
+  -webkit-transform: translate(0, 21px) rotate(-45deg);
+          transform: translate(0, 21px) rotate(-45deg); }
+
+.tb--lg.tb--x span:after {
+  -webkit-transform: translate(0, -21px) rotate(45deg);
+          transform: translate(0, -21px) rotate(45deg); }
