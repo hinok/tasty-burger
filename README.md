@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/hinok/tasty-burger.svg?branch=master)](https://travis-ci.org/hinok/tasty-burger)
+
 # :fire: :hamburger: Tasty Burger
 
 Mmmmhmmm this is a tasty burger
