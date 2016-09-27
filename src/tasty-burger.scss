@@ -1,7 +1,7 @@
 $tb-class: '.tb' !default;
 $tb-color: #000 !default;
 $tb-bar-height: 2px !default;
-$tb-animation-time: 0.3s !default;
+$tb-animation-time: .3s !default;
 $tb-sizes: (
   sm: 12px,
   md: 24px,
@@ -33,6 +33,7 @@ $tb-sizes: (
   $spacing: $gap-size + $tb-bar-height;
 
   #{$tb-class} {
+    // scss-lint:disable NestingDepth
     &--#{$size-name} {
       width: $icon-size * 1.2;
       height: $icon-size;
@@ -41,16 +42,16 @@ $tb-sizes: (
         margin: $spacing 0 0;
 
         &,
-        &:before,
-        &:after {
+        &::before,
+        &::after {
           height: $tb-bar-height;
         }
 
-        &:before {
-           top: -($spacing);
+        &::before {
+          top: -($spacing);
         }
 
-        &:after {
+        &::after {
           top: $spacing;
         }
       }
@@ -59,20 +60,23 @@ $tb-sizes: (
 
   // After transformation to the ✖ shape.
   #{$tb-class}--#{$size-name}#{$tb-class}--x {
-    span:before { transform: translate(0,  ($spacing)) rotate(-45deg); }
-    span:after  { transform: translate(0, -($spacing)) rotate(45deg); }
+    span::before { transform: translate(0, ($spacing)) rotate(-45deg); }
+    span::after { transform: translate(0, -($spacing)) rotate(45deg); }
   }
 }
 
 #{$tb-class} {
   display: inline-block;
-  vertical-align: middle;
   font-size: 0; // Fix spacing issues
   cursor: pointer;
+  vertical-align: middle;
+  // scss-lint:disable ColorVariable
+  -webkit-tap-highlight-color: rgba(#000, 0);
+  // scss-lint:enable ColorVariable
 
   &,
-  &:after,
-  &:before {
+  &::after,
+  &::before {
     box-sizing: border-box;
   }
 
@@ -80,17 +84,17 @@ $tb-sizes: (
     position: relative;
 
     &,
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       display: block;
       width: 100%;
-      background: $tb-color;
       transition: all $tb-animation-time;
+      background: $tb-color;
       backface-visibility: hidden;
     }
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       position: absolute;
       content: '';
     }
@@ -98,8 +102,8 @@ $tb-sizes: (
 
   // Make bigger space between lines on hover
   &:hover {
-    span:before { transform: translateY(-2px); }
-    span:after  { transform: translateY(2px); }
+    span::before { transform: translateY(-2px); }
+    span::after { transform: translateY(2px); }
   }
 
   // After transformation to the ✖ shape.

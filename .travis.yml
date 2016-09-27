@@ -1,4 +1,10 @@
 language: node_js
 node_js:
   - "5.11"
-after_success: npm run vr:test
+before_install:
+  - rvm install 2.3.1
+install:
+  - bundle install
+  - npm install
+after_success:
+  - npm run ci
